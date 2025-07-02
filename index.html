@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Dress Code</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .poster {
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .poster::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,215,0,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5em;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient 3s ease infinite;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+        
+        .day-section {
+            margin-bottom: 35px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+            border-radius: 20px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .day-section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .day-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        
+        .day-name {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .thursday { color: #ff6b35; }
+        .friday { color: #2d8a2f; }
+        .sunday { color: #d4a574; }
+        
+        .day-icon {
+            font-size: 2em;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        
+        .dress-group {
+            margin-bottom: 15px;
+        }
+        
+        .group-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .dress-options {
+            margin-left: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .color-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin: 2px 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        .yellow { background: linear-gradient(45deg, #ffd700, #ffed4e); }
+        .rani-pink { background: linear-gradient(45deg, #ff1493, #ff69b4); }
+        .orange { background: linear-gradient(45deg, #ff8c00, #ffa500); }
+        .bright-red { background: linear-gradient(45deg, #dc143c, #ff4444); }
+        .green { background: linear-gradient(45deg, #228b22, #32cd32); }
+        .beige { background: linear-gradient(45deg, #deb887, #f5deb3); color: #8b4513; }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .celebration {
+            font-size: 2em;
+            margin: 20px 0;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .note {
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            padding: 15px;
+            border-radius: 15px;
+            margin-top: 25px;
+            border-left: 5px solid #e17055;
+            font-style: italic;
+            color: #2d3436;
+        }
+    </style>
+</head>
+<body>
+    <div class="poster">
+        <div class="header">
+            <h1 class="title">Wedding Dress Code</h1>
+            <p class="subtitle">Let's celebrate in style! ✨</p>
+        </div>
+        
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-icon">🌟</div>
+                <h2 class="day-name thursday">Thursday (Hudas Day)</h2>
+            </div>
+            <div class="dress-group">
+                <div class="group-title">👗 Ladies & 👨 Gents:</div>
+                <div class="dress-options">
+                    <span class="color-tag yellow">Yellow</span>
+                    <span class="color-tag rani-pink">Rani Pink</span>
+                    <span class="color-tag orange">Orange</span>
+                    <span class="color-tag bright-red">Bright Red</span>
+                    <br><strong>Bright color theme! 🎊</strong>
+                </div>
+            </div>
+        </div>
+        
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-icon">🌿</div>
+                <h2 class="day-name friday">Friday</h2>
+            </div>
+            <div class="dress-group">
+                <div class="group-title">👗 Ladies:</div>
+                <div class="dress-options">
+                    <span class="color-tag green">Any Green Color</span>
+                </div>
+            </div>
+            <div class="dress-group">
+                <div class="group-title">👨 Men:</div>
+                <div class="dress-options">
+                    <span class="color-tag green">Green Bling Kurta</span><br>
+                    <em>(Thelanguna Kurtha)</em>
+                </div>
+            </div>
+        </div>
+        
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-icon">☀️</div>
+                <h2 class="day-name sunday">Sunday</h2>
+            </div>
+            <div class="dress-group">
+                <div class="group-title">👗 Ladies:</div>
+                <div class="dress-options">
+                    <span class="color-tag beige">Beige Color</span>
+                </div>
+            </div>
+            <div class="dress-group">
+                <div class="group-title">👨 Men:</div>
+                <div class="dress-options">
+                    • Light-colored linen suit (linen or linen blend)<br>
+                    <strong>OR</strong><br>
+                    • Light-colored linen shirt and trouser (without suit)
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="celebration">🎉 Let's make it memorable! 🎉</div>
+            <div class="note">
+                <strong>Note:</strong> Please follow the dress code to make our celebration colorful and coordinated! Thank you! 💕
+            </div>
+        </div>
+    </div>
+</body>
+</html>
